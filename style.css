@@ -1,0 +1,22 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar styling for a cleaner look */
+#message-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+#message-area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#message-area::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#message-area::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
