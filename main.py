@@ -1,3 +1,4 @@
+
 # File: main.py
 # Description: An advanced multi-tool agent for ServiceNow.
 # (MODIFIED: Swapped to a Llama 3.1 model that supports tool calling)
@@ -11,6 +12,8 @@ from pydantic import BaseModel, Field
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 # --- LangChain Imports ---
 from langchain_nvidia_ai_endpoints import ChatNVIDIA # Using NVIDIA's library
@@ -261,6 +264,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def read_index():
+    # This serves your index.html file at the root path
+    return FileResponse('index.html')
+
+app.mount("/static", StaticFiles(directory=".", html=True), name="static")
+
 class ChatRequest(BaseModel):
     message: str
     session_id: str = "default-session"

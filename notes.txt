@@ -2,7 +2,7 @@ pip install langchain-nvidia-ai-endpoints
 
 n> python -m uvicorn main:app --reload
 
-
+pip install -r requirements.txt
 
 Of course. Here is a comprehensive list of prompts designed to test the full range of our agent's capabilities, from simple commands to complex, multi-step conversations.
 

@@ -12,7 +12,7 @@ const messageInput = document.getElementById('message-input');
 const sendButton = document.getElementById('send-button');
 
 // The URL of our FastAPI backend
-const BACKEND_URL = 'http://127.0.0.1:8000';
+//const BACKEND_URL = 'http://127.0.0.1:8000';
 
 // --- Event Listeners ---
 
@@ -103,7 +103,8 @@ async function getBotResponse(userMessage) {
     const typingIndicator = showTypingIndicator();
 
     try {
-        const response = await fetch(`${BACKEND_URL}/chat`, {
+        //const response = await fetch(`${BACKEND_URL}/chat`, {
+        const response = await fetch(`/chat`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
