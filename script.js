@@ -104,15 +104,17 @@ async function getBotResponse(userMessage) {
 
     try {
         //const response = await fetch(`${BACKEND_URL}/chat`, {
-        const response = await fetch(`/chat`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                message: userMessage,
-            }),
-        });
+        const response = await fetch("/chat", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    session_id: "default-session",
+    message: userInput,
+  }),
+});
+
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

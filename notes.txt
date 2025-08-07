@@ -96,3 +96,13 @@ This is the most important test. Try this exact sequence of prompts:
 5.  **Follow-up 3:** `"Can you search for any other tickets related to 'email'?"` (Tests if it can switch from a specific task to a general one).
 
 Running through these prompts will give you a very clear picture of the agent's intelligence, its ability to use its tools, and its capacity to hold a natural conversation.
+
+
+Do we have any tickets with the keyword 'Health Check'?
+Do you have any tickets based on Health Check ?
+List all open incidents for David Miller
+Search KB on Cisco WebEx Meetings Server
+
+Which incidents are assigned to David Miller ?? **
+Add note to INC0010011 , to restart the device
+Open a new incident for printer malfunction on 3rd floor.
